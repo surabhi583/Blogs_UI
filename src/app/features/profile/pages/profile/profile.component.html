@@ -1,0 +1,62 @@
+@if (profile) {
+  <div class="profile-page">
+    <div class="user-info">
+      <div class="container">
+        <div class="row" style="float: right;">
+          @if (isUser) {
+            <div class="col-md-8">
+              <button
+              [routerLink]="['/settings']"
+              class="btn btn-outline-danger"
+            >
+              <i class="ion-gear-a"></i> Edit Profile Settings
+            </button>
+          </div>
+            <div class="col-md-2">
+              <button class="btn btn-outline-danger" (click)="logout()">
+                Logout
+              </button>
+            </div>
+          }
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-md-10 offset-md-1">
+            <img [src]="profile.image" class="user-img" />
+            <h4>{{ profile.username }}</h4>
+            <p>{{ profile.bio }}</p>
+            @if (!isUser) {
+              <app-follow-button
+                [profile]="profile"
+                (toggle)="onToggleFollowing($event)"
+              />
+            }
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-10 offset-md-1">
+          <div class="articles-toggle">
+            <ul class="nav nav-pills outline-active">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  [routerLink]="['/profile', profile.username]"
+                >
+                  My Posts
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+}
