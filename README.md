@@ -1,9 +1,7 @@
-# ![Angular 18 Example App]
+# [Angular 18 Example App]
 
 > ### Angular codebase containing Article Blogs example (CRUD, auth, advanced patterns, etc)
 ### Making requests to the backend API
-
-For convenience, we have a live API server running at https://conduit.productionready.io/api for the application to make requests against. You can view [the API spec here](https://github.com/GoThinkster/productionready/blob/master/api) which contains all routes & responses for the server.
 
 The source code for the backend server in .NET CORE 8.0 can be found in the https://github.com/surabhi583/Blogs_API
 
@@ -38,14 +36,14 @@ The example application is a Technical article blogging site (i.e. a Medium.com 
 - Sign in/Sign up pages (URL: /#/login, /#/register )
   - Uses JWT (store the token in localStorage)
   - Authentication can be easily switched to session/cookie based
-- Users page (URL: /#/users )
+- Users page (URL: /#/users,  /#/users/:email to edit the user details)
 - Editor page to create/edit articles (URL: /#/editor, /#/editor/article-slug-here )
 - Article page (URL: /#/article/article-slug-here )
   - Delete article button (only shown to article's author)
   - Render markdown from server client side
   - Comments section at bottom of page
   - Delete comment button (only shown to comment's author)
-- Profile page (URL: /#/profile/:username, /#/profile/:username/favorites )
+- Profile page (URL: /#/profile/:username )
   - Show basic user info
   - List of articles populated from author's created articles or author's favorited articles
 
