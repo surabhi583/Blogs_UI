@@ -16,7 +16,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Functionality overview
 
-The example application is a Technical article blogging site (i.e. a Medium.com clone) called "SVM Projects". It uses a custom API for all requests, including authentication. 
+The example application is a Technical article blogging site called "SVM Projects". It uses a custom API for all requests, including authentication. 
 **General functionality:**
 
 - Authenticate users via JWT (login/signup pages + logout button on settings page)
@@ -24,7 +24,6 @@ The example application is a Technical article blogging site (i.e. a Medium.com 
 - CRUD Articles
 - CR\*D Comments on articles (no updating required)
 - GET and display paginated lists of articles
-- Favorite articles
 - Follow other users
 
 **The general page breakdown looks like this:**
